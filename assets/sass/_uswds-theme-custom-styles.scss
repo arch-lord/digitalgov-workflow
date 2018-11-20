@@ -23,3 +23,7 @@ i.e.
 .select2-selection__choice {
   padding: 4.5px 8px !important;
 }
+
+.home-nav-link:visited {
+  @include u-text('primary-darker');
+}
