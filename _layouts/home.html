@@ -1,11 +1,37 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
 
-<h1 class="post-title">{{ page.title | escape }}</h1>
-{% if page.deck %}
-<div class="deck">{{ page.deck | escape }}</div>
-{% endif %}
-<div class="post-content">
-  {{ content }}
-</div>
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  {% include header.html %}
+
+  <main id="main-content" class="padding-y-5">
+    <div class="grid-container">
+      <div class="grid-row">
+        <div class="grid-col-6 grid-offset-3">
+          <h2 class="text-center">This is how we manage our content in the open. Feel free to explore.</h2>
+        </div>
+      </div>
+      <div class="grid-row margin-top-4">
+        <div class="grid-col-6 grid-offset-3">
+          <ul class="add-list-reset">
+            {% for item in site.data.navigation.navigation %}
+            <li>
+              <a href="{{ site.baseurl }}{{ item.url }}" class="border-top-2px padding-y-1 display-block text-no-underline text-base-darker home-nav-link">
+                <span>{{ item.text }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+
+</html>
