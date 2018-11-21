@@ -32,13 +32,3 @@ source_of_truth: "https://demo.digital.gov"
 
 # Build settings
 markdown: kramdown
-# theme: minima
-# plugins:
-# #   - jekyll-feed
-#   # - jemoji
-
-jekyll_get:
-  - data: topics
-    json: 'https://demo.digital.gov/topics/v1/json/'
-  - data: promos
-    json: 'https://demo.digital.gov/promos/v1/json/'
