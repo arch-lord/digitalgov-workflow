@@ -6,20 +6,18 @@ layout: default
 {% if page.deck %}
 <div class="deck">{{ page.deck | escape }}</div>
 {% endif %}
-<div class="post-content">
-  {{ content }}
-</div>
 
-{% if page.api == 'resources' or page.api == 'services' or page.api == 'communities' or page.api == 'posts' or page.api == 'events' %}
-  {% include pages.html %}
+{% if page.api == 'resources' or page.api == 'services' or page.api == 'communities' or page.api == 'posts' or page.api
+== 'events' %}
+{% include pages.html %}
 {% endif %}
 
 {% if page.api == 'promos' %}
-  {% include promos.html %}
+{% include promos.html %}
 {% endif %}
 
 {% if page.api == 'topics' %}
-  {% include topics.html %}
+{% include topics.html %}
 {% endif %}
 
 {% if page.git-label %}
