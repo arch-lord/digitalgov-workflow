@@ -2,7 +2,17 @@
 layout: default
 ---
 
-<h1 class="post-title">{{ page.title | escape }}</h1>
+<div class="grid-row">
+  <div class="tablet:grid-col">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </div>
+  <div class="grid-col-auto">
+    {% if page.url == '/posts/' %}
+    {% assign size = page.url | size | minus: 2 %}
+    <a href="{{ site.baseurl }}/new{{ page.url | slice: 0, size }}" class="usa-button margin-top-3">New</a>
+    {% endif %}
+  </div>
+</div>
 {% if page.deck %}
 <div class="deck">{{ page.deck | escape }}</div>
 {% endif %}
