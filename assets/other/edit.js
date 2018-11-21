@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 
   // API path
   // See all the digital.gov APIs https://github.com/GSA/digitalgov.gov/wiki/APIs
-  var api_path = "https://cors-anywhere.herokuapp.com/" + path + 'index.json';
+  var api_path = path + 'index.json';
   console.log(api_path);
 
   var post_data = (function () {

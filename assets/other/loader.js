@@ -13,7 +13,7 @@
     return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
   }
   if (current_page in pages) {
-    fetch("https://cors-anywhere.herokuapp.com/" + pages[current_page]).then(data => {
+    fetch(pages[current_page]).then(data => {
       return data.json();
     }).then(data => {
       data = data.items;
