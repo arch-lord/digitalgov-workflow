@@ -59,7 +59,7 @@
             <div class="tablet:grid-col margin-bottom-1">
               <article class="bg-base-lightest padding-2 padding-bottom-${item.topics ? "0" : "105"}">
                 <h3 class="margin-0"><a href="${source_of_truth}${item.url}" class="text-base-darkest underline-primary-light text-underline">${item.title}</a></h3>
-                <h4 class="margin-top-0 margin-bottom-1 text-normal text-uppercase text-base-darker">${item.date_published}</h4>
+                <h4 class="margin-top-0 margin-bottom-1 text-normal text-uppercase text-base-darker">${monthName} ${itemDate.getDate()}, ${itemDate.getFullYear()}</h4>
                 <p class="margin-0">${item.summary}</p>
           `;
           if (item.topics) {
